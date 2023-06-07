@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for i in range(99):
-    print(f"{i:d} = 0x{i:0x}")
+    print("{:d} = 0x{:0x}".format(i, i))
