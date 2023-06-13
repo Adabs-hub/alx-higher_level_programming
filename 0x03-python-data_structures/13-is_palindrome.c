@@ -49,8 +49,6 @@ int is_palindrome(listint_t **head)
 			return (0);
 		}
 		my_list = my_list->next;
-		my_list = my_list->next;
-		reversed = reversed->next;
 		reversed = reversed->next;
 	}
 
