@@ -18,33 +18,33 @@ class Rectangle:
     @property
     def width(self):
         """ width retrieve """
-        return width
+        return self.__width
 
     @width.setter
     def width(self, value):
         """ set width """
         try:
-            width = value
+            self.__width = value
         except TypeError:
             print("width must be an integer")
-        if width < 0:
+        if self.__width < 0:
             raise ValueError("width must be >=0")
 
-        return width
+        return self.__width
 
     @property
     def height(self):
         """ retrieve height """
-        return height
+        return self.__height
 
     @height.setter
     def height(self, value):
         """ set height """
         try:
-            height = value
+            self.__height = value
         except TypeError:
             print("height must be an integer")
-        if height < 0:
+        if self.__height < 0:
             raise ValueError("height must be >= 0")
 
-        return height
+        return self.__height
