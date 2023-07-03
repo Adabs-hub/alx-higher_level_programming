@@ -14,10 +14,8 @@ class Rectangle:
     def width(self, value):
         try:
             width = value
-
         except TypeError:
             print("width must be an integer")
-
         if width < 0:
             raise Exception("width must be >= 0")
 
@@ -29,9 +27,7 @@ class Rectangle:
     def height(self, value):
         try:
             height = value
-
         except TypeError:
             print("height must be an integer")
-
         if height < 0:
             raise Exception("height must be >= 0")
