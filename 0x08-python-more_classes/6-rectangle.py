@@ -82,9 +82,5 @@ class Rectangle:
 
     def __del__(self):
         """ when class object is deleted """
-        try:
-            print("Bye rectangle...")
-        except NameError:
-            pass
-        if number_of_instances > 0:
             number_of_instances -= 1
+            print("Bye rectangle...")
