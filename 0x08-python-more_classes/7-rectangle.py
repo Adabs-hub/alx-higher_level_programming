@@ -12,7 +12,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
-    symbol = "#"
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ constructor method """
@@ -71,7 +71,7 @@ class Rectangle:
         print_str = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                print_str += symbol
+                print_str += str(self.print_symbol)
             if i != self.__height - 1:
                 print_str += "\n"
         return print_str
@@ -84,6 +84,3 @@ class Rectangle:
         """ when class object is deleted """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-    def print_symbol(self, symbol):
-        Rectangle.symbol = symbol
