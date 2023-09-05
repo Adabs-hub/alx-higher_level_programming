@@ -10,10 +10,15 @@ class Rectangle:
     private instance property: width (int)
     private instance property: height (int)
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ constructor method """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -57,3 +62,25 @@ class Rectangle:
             return 0
         else:
             return ((2 * self.__height)+(2 * self.__width))
+
+    def __str__(self):
+        """ class str: print rectangle with # char """
+        if self.__height == 0 or self.__width == 0:
+            return ""
+
+        print_str = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print_str += str(self.print_symbol)
+            if i != self.__height - 1:
+                print_str += "\n"
+        return print_str
+
+    def __repr__(self):
+        """ return a string representation of an rectangle """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """ when class object is deleted """
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
