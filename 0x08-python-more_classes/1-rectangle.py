@@ -3,7 +3,6 @@
 """Class Rectangle."""
 
 
-
 class Rectangle:
     """
     initialize rectangle.
@@ -37,7 +36,6 @@ class Rectangle:
         self.__width = value
         return value
 
-
     @height.setter
     def height(self, value):
         """Set the height of the rectangle."""
@@ -48,4 +46,3 @@ class Rectangle:
         else:
             self.__height = value
             return value
-
