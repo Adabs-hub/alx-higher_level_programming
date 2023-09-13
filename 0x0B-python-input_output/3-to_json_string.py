@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """JSON representation of strigng"""
+
+
 import json
 
 def to_json_string(my_obj):
