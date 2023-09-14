@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""return path name."""
+"""Load and save file."""
 import sys
-"""syst ."""
 import os
-"""os save ."""
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-"""Load and save file"""
+"""os save ."""
 
 args = sys.argv
 del args[0]
@@ -22,5 +20,5 @@ if os.path.exists(filename):
 
 else:
     if len(args) > 0:
-        my_list = args;
+        my_list = args
     save_to_json_file(my_list, filename)
