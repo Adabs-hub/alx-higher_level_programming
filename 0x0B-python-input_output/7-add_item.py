@@ -7,7 +7,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 args = sys.argv
 del args[0]
 filename = "add_item.json"
-my_list = [];
+my_list = []
 if os.path.exists(filename):
     load = load_from_json_file(filename)
     if len(args) > 0:
