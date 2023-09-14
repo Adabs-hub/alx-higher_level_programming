@@ -21,4 +21,6 @@ if os.path.exists(filename):
         save_to_json_file(my_list, filename)
 
 else:
+    if len(args) > 0:
+        my_list = args;
     save_to_json_file(my_list, filename)
