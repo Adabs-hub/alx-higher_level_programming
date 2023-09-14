@@ -14,8 +14,5 @@ if os.path.exists(filename):
         my_list.extend(load)
         my_list.extend(args)
         save_to_json_file(my_list, filename)
-        print(my_list)
-    else:
-        print(load)
 else:
     save_to_json_file(my_list, filename)
