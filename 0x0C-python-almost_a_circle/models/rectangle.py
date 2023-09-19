@@ -126,20 +126,33 @@ class Rectangle(Base):
 
     def __str__(self):
         """Overrite str to rect string."""
-        return (f"[Rectangle] ({self.id}) {self.x}/{self.y}"
-        " - {self.__width}/{self.__height}")
+        text = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+        return text + f"{self.__width}/{self.__height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update values in Rect."""
-        size = len(args)
+        if len(args) > 0:
+            size = len(args)
 
-        if size > 0:
-            self.id = args[0]
-        if size > 1:
-            self.__width = args[1]
-        if size > 2:
-            self.__height = args[2]
-        if size > 3:
-            self.__x = args[3]
-        if size > 4:
-            self.__y = args[4]
+            if size > 0:
+                self.id = args[0]
+            if size > 1:
+                self.__width = args[1]
+            if size > 2:
+                self.__height = args[2]
+            if size > 3:
+                self.__x = args[3]
+            if size > 4:
+                self.__y = args[4]
+        else:
+            for key in kwargs:
+                if key == "x":
+                    self.__x = kwargs[key]
+                elif key == "y":
+                    self.__y = kwargs[key]
+                elif key == "width":
+                    self.__width = kwargs[key]
+                elif key == "height":
+                    self.__height = kwargs[key]
+                elif key == "id":
+                    self.id == kwargs[key]
