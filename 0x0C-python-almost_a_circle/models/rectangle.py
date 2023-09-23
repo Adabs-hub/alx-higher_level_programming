@@ -156,3 +156,7 @@ class Rectangle(Base):
                     self.__height = kwargs[key]
                 elif key == "id":
                     self.id == kwargs[key]
+
+    def to_dictionary(self):
+        """Return dictionary of the rectangle class"""
+        return self.__dict__
